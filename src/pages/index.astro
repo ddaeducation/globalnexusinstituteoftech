@@ -1,19 +1,31 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Welcome">
   <!-- Hero Section -->
-  <section class="relative h-screen flex items-center justify-center bg-[url('/images/back2.jpeg')] bg-cover bg-center">
+  <section
+    class="relative h-screen flex items-center justify-center bg-[url('/images/back2.jpeg')] bg-cover bg-center"
+  >
     <div class="absolute inset-0 bg-red-10"></div>
     <div class="relative z-10 text-center px-4">
-      <h1 class="text-4xl md:text-6xl font-bold mb-6 text-white">Global Nexus Institute</h1>
-      <p class="text-xl md:text-2xl mb-8 text-black">Connect with future tech leaders</p>
+      <h1 class="text-4xl md:text-6xl font-bold mb-6 text-white">
+        Global Nexus Institute
+      </h1>
+      <p class="text-xl md:text-2xl mb-8 text-black">
+        Connect with future tech leaders
+      </p>
       <div class="flex flex-wrap justify-center gap-4">
-        <a href="/programs" class="bg-white text-primary px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition">
+        <a
+          href="/programs"
+          class="bg-white text-primary px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition"
+        >
           Explore Programs
         </a>
-        <a href="/admissions" class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-primary transition">
+        <a
+          href="/admissions"
+          class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full font-semibold hover:bg-white hover:text-primary transition"
+        >
           Apply Now
         </a>
       </div>
@@ -32,13 +44,17 @@ import Layout from '../layouts/Layout.astro';
         </a>
         <a href="/admissions" class="group">
           <div class="p-6 bg-gray-50 rounded-lg hover:shadow-lg transition">
-            <h3 class="text-xl font-semibold text-primary mb-2">Scholarships</h3>
+            <h3 class="text-xl font-semibold text-primary mb-2">
+              Scholarships
+            </h3>
             <p class="text-gray-600">Explore funding opportunities</p>
           </div>
         </a>
         <a href="/programs" class="group">
           <div class="p-6 bg-gray-50 rounded-lg hover:shadow-lg transition">
-            <h3 class="text-xl font-semibold text-primary mb-2">Learning Portal</h3>
+            <h3 class="text-xl font-semibold text-primary mb-2">
+              Learning Portal
+            </h3>
             <p class="text-gray-600">Access your online courses</p>
           </div>
         </a>
@@ -56,18 +72,24 @@ import Layout from '../layouts/Layout.astro';
   <section class="py-16 bg-gray-50">
     <div class="container mx-auto px-4">
       <div class="max-w-3xl mx-auto text-center">
-        <h2 class="text-3xl font-bold text-gray-900 mb-8">Our Vision & Mission</h2>
+        <h2 class="text-3xl font-bold text-gray-900 mb-8">
+          Our Vision & Mission
+        </h2>
         <div class="space-y-8">
           <div>
             <h3 class="text-2xl font-semibold text-primary mb-4">Vision</h3>
             <p class="text-lg text-gray-600">
-              To be a transformative institution that empowers the next generation of leaders, innovators, and professionals in technology and data sciences across Africa and beyond.
+              To be a transformative institution that empowers the next
+              generation of leaders, innovators, and professionals in technology
+              and data sciences across Africa and beyond.
             </p>
           </div>
           <div>
             <h3 class="text-2xl font-semibold text-primary mb-4">Mission</h3>
             <p class="text-lg text-gray-600">
-              To provide high-quality, accessible education that bridges local needs with global opportunities, creating pathways to employment, innovation, and societal impact.
+              To provide high-quality, accessible education that bridges local
+              needs with global opportunities, creating pathways to employment,
+              innovation, and societal impact.
             </p>
           </div>
         </div>
@@ -78,11 +100,25 @@ import Layout from '../layouts/Layout.astro';
   <!-- Student Gallery -->
   <section class="py-16 bg-white">
     <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Our Students at Work</h2>
+      <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">
+        Our Students at Work
+      </h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Students collaborating" class="w-full h-64 object-cover rounded-lg shadow-md" />
-        <img src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Students in workshop" class="w-full h-64 object-cover rounded-lg shadow-md" />
-        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Students presenting" class="w-full h-64 object-cover rounded-lg shadow-md" />
+        <img
+          src="/images/back.jpeg"
+          alt="Students collaborating"
+          class="w-full h-64 object-cover rounded-lg shadow-md"
+        />
+        <img
+          src="/images/learning.jpeg"
+          alt="Students in workshop"
+          class="w-full h-64 object-cover rounded-lg shadow-md"
+        />
+        <img
+          src="/images/steam2.jpeg"
+          alt="Students presenting"
+          class="w-full h-64 object-cover rounded-lg shadow-md"
+        />
       </div>
     </div>
   </section>
@@ -90,32 +126,74 @@ import Layout from '../layouts/Layout.astro';
   <!-- News & Events -->
   <section class="py-16 bg-gray-50">
     <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">Latest News & Events</h2>
+      <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">
+        Latest News & Events
+      </h2>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div class="bg-white rounded-lg shadow-md overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Event" class="w-full h-48 object-cover" />
+          <img
+            src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+            alt="Event"
+            class="w-full h-48 object-cover"
+          />
           <div class="p-6">
-            <h3 class="text-xl font-semibold text-gray-900 mb-2">New Data Science Program Launch</h3>
-            <p class="text-gray-600 mb-4">Join us for the launch of our advanced Data Science program in collaboration with industry leaders.</p>
-            <a href="#" class="text-primary font-semibold hover:text-primary-dark">Learn more →</a>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">
+              Professional Data Science & Artificial Intelligence (New)
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Join us new professional Data Science & Artificial Intelligence
+              program in collaboration with Institute of Analytics (Endorsed).
+            </p>
+            <a
+              href="#"
+              class="text-primary font-semibold hover:text-primary-dark"
+              >Learn more →</a
+            >
           </div>
         </div>
         <div class="bg-white rounded-lg shadow-md overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Event" class="w-full h-48 object-cover" />
+          <img
+            src="/images/studing.jpeg"
+            alt="Event"
+            class="w-full h-48 object-cover"
+          />
           <div class="p-6">
-            <h3 class="text-xl font-semibold text-gray-900 mb-2">Tech Innovation Workshop</h3>
-            <p class="text-gray-600 mb-4">A hands-on workshop exploring the latest trends in AI and machine learning.</p>
-            <a href="#" class="text-primary font-semibold hover:text-primary-dark">Learn more →</a>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">
+              National Computing Center (UK) & Tech Innovation Workshop
+            </h3>
+            <p class="text-gray-600 mb-4">
+              A hands-on workshop exploring the latest trends in AI and Python
+              Data Analytics and more
+            </p>
+            <a
+              href="#"
+              class="text-primary font-semibold hover:text-primary-dark"
+              >Learn more →</a
+            >
           </div>
         </div>
         <div class="bg-white rounded-lg shadow-md overflow-hidden">
-          <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Event" class="w-full h-48 object-cover" />
+          <img
+            src="/images/setting.jpeg"
+            alt="Event"
+            class="w-full h-48 object-cover"
+          />
           <div class="p-6">
-            <h3 class="text-xl font-semibold text-gray-900 mb-2">Industry Partnership Announcement</h3>
-            <p class="text-gray-600 mb-4">Exciting new partnership with leading tech companies to enhance student opportunities.</p>
-            <a href="#" class="text-primary font-semibold hover:text-primary-dark">Learn more →</a>
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">
+              Professional Business Data Analytics
+            </h3>
+            <p class="text-gray-600 mb-4">
+              Global Nexus Institute is pleased to announce the new program:
+              Professional Business Data Analytics (endorsed by NCC and IoA).
+            </p>
+            <a
+              href="#"
+              class="text-primary font-semibold hover:text-primary-dark"
+              >Learn more →</a
+            >
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </section></Layout
+>
