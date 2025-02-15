@@ -1,0 +1,93 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Consulting Services">
+  <!-- Services Header -->
+  <section class="pt-24 pb-16 bg-primary">
+    <div class="container mx-auto px-4 text-white">
+      <h1 class="text-4xl font-bold mb-6 text-center">Professional Consulting Solutions</h1>
+      <p class="text-xl text-center max-w-3xl mx-auto">
+        We deliver comprehensive data solutions and actionable insights to drive informed business decisions.
+      </p>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Training Enumerators -->
+        <div class="bg-gray-50 rounded-lg p-8 hover:shadow-lg transition-shadow">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="bg-primary rounded-full p-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <h2 class="text-2xl font-bold text-primary">Training Enumerators</h2>
+          </div>
+          <p class="text-gray-600 mb-6">Our comprehensive enumerator training program combines theoretical knowledge with hands-on practice, covering survey methodologies, data quality protocols, and ethical guidelines. We ensure field researchers master modern data collection tools, interview techniques, and quality assurance practices for conducting reliable research that meets international standards.</p>
+          <a href="/contact" class="inline-block bg-primary text-white px-6 py-2 rounded-full hover:bg-primary-dark transition">
+            Get Started
+          </a>
+        </div>
+
+        <!-- Data Collection -->
+        <div class="bg-gray-50 rounded-lg p-8 hover:shadow-lg transition-shadow">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="bg-primary rounded-full p-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+            </div>
+            <h2 class="text-2xl font-bold text-primary">Data Collection</h2>
+          </div>
+          <p class="text-gray-600 mb-6">Utilizing cutting-edge digital tools and methodologies, we conduct comprehensive data collection across various sectors. Our experienced team implements rigorous quality control measures, ensuring accurate and reliable data gathering through surveys, interviews, and field observations while maintaining the highest standards of data security and privacy compliance.</p>
+          <a href="/contact" class="inline-block bg-primary text-white px-6 py-2 rounded-full hover:bg-primary-dark transition">
+            Learn More
+          </a>
+        </div>
+
+        <!-- Data Processing -->
+        <div class="bg-gray-50 rounded-lg p-8 hover:shadow-lg transition-shadow">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="bg-primary rounded-full p-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
+              </svg>
+            </div>
+            <h2 class="text-2xl font-bold text-primary">Data Processing</h2>
+          </div>
+          <p class="text-gray-600 mb-6">Transform raw data into meaningful insights through our advanced processing services. We employ sophisticated cleaning algorithms, statistical validation techniques, and quality assurance protocols to ensure data accuracy. Our expert team uses industry-leading tools to structure and analyze data, preparing it for advanced analytics and decision-making.</p>
+        </div>
+
+        <!-- Report Writing -->
+        <div class="bg-gray-50 rounded-lg p-8 hover:shadow-lg transition-shadow">
+          <div class="flex items-center gap-4 mb-6">
+            <div class="bg-primary rounded-full p-4">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+            </div>
+            <h2 class="text-2xl font-bold text-primary">Report Writing</h2>
+          </div>
+          <p class="text-gray-600 mb-6">Our expert report writing service transforms complex data into clear, actionable insights. We create comprehensive reports featuring detailed analysis, visual representations, and strategic recommendations. Each report is tailored to your specific needs, incorporating industry best practices and delivering findings in a format that supports informed decision-making.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold text-gray-900 mb-6">Ready to Get Started?</h2>
+      <p class="text-lg text-gray-600 mb-8">Contact us to discuss your project requirements and how we can help you achieve your goals.</p>
+      <div class="flex justify-center">
+        <a href="/contact" class="inline-block bg-primary text-white px-8 py-3 rounded-full hover:bg-primary-dark transition">
+          Contact Us for More Information
+        </a>
+      </div>
+    </div>
+  </section>
+</Layout>
