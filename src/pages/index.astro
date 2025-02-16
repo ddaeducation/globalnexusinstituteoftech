@@ -38,10 +38,8 @@ import { useEffect, useState } from "react";
     id="popup"
     class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden"
   >
-    <div class="bg-white p-6 rounded-lg shadow-lg text-center">
-      <h2 class="text-xl font-semibold text-gray-900 mb-4">
-        Call For Application!
-      </h2>
+    <div class="bg-white p-6 rounded-lg shadow-sm text-center relative">
+      <h2 class="text-xl text-gray-900 mb-4">Call For Application!</h2>
       <p class="text-gray-600 mb-2">Don't miss this opportunity to join us!</p>
       <p class="text-red-600 font-semibold mb-4">Deadline: February 21, 2025</p>
       <a
@@ -58,11 +56,12 @@ import { useEffect, useState } from "react";
       >
         Read More
       </a>
+      <!-- Close button placed in the middle bottom -->
       <button
         onclick="document.getElementById('popup').style.display='none'"
-        class="block mt-4 text-gray-500 hover:text-gray-700"
+        class="absolute top-4 left-3.8 transform -translate-x-1/2 text-gray-500 hover:text-black-700"
       >
-        Close
+        X
       </button>
     </div>
   </div>
