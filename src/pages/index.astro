@@ -34,17 +34,75 @@ import { useEffect, useState } from "react";
   </section>
 
   <!-- Pop-up Call for Application -->
+
   <div
     id="popup"
     class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden"
   >
     <div class="bg-white p-6 rounded-lg shadow-sm text-center relative">
-      <h2 class="text-xl text-gray-900 mb-4">Call For Application!</h2>
-      <p class="text-gray-600 mb-2">Don't miss this opportunity to join us!</p>
-      <p class="text-red-600 font-semibold mb-4">Deadline: February 21, 2025</p>
+      <div class="text-center mb-6">
+        <div
+          class="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4"
+        >
+          <img
+            src="/images/logo.png"
+            alt="Logo"
+            class="w-19 h-19 object-cover"
+          />
+        </div>
+        <h2 class="text-2xl font-bold text-gray-900 mb-2">
+          Call For Application!
+        </h2>
+        <p class="text-gray-600 mb-2">
+          Don't miss this opportunity to join us!
+        </p>
+        <p class="text-red-600 font-semibold mb-4">
+          Deadline: February 21, 2025
+        </p>
+      </div>
+
+      <div class="relative flex justify-center items-center mb-8">
+        <button
+          onclick="document.getElementById('popup').style.display='none'"
+          class="p-2 bg-gray-100 hover:bg-gray-200 rounded-full z-10"
+        >
+          X
+        </button>
+        <h3 class="absolute text-blue-900 text-xl font-semibold opacity-30">
+          Call For Application: Python Data Analytics
+        </h3>
+      </div>
+
+      <div class="space-y-4 w-full text-left">
+        <div class="bg-blue-50 p-4 rounded-lg">
+          <h3 class="font-semibold text-blue-900 mb-2">
+            Python Data Analytics Details
+          </h3>
+          <ul class="space-y-2 text-blue-800">
+            <li>• Mode of Training: Live Online</li>
+            <li>• Support: One on One Office Hours</li>
+            <li>• Starting Date: February 21, 2025</li>
+            <li>• Duration: 4 Weeks with two sessions per week</li>
+            <li>• Online: Sat & Sun from 7:30PM-9:30PM CAT</li>
+            <li>• Fee: 40,000 RWF/5,000 KES (Live Online)</li>
+            <li>• Contact us if you are a person with special needs</li>
+            <li>• WhatsApp: +2507 874 06140 or +254 707 825 181</li>
+            <li>
+              <a
+                href="https://store.pesapal.com/pythondataanalyticsprogram"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="block mt-2 text-white bg-red-600 px-4 py-2 text-center rounded-lg font-semibold"
+              >
+                Make a Payment
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
       <a
-        href="/admissions"
-        class="bg-primary text-white px-4 py-3 rounded-full font-semibold hover:bg-primary-dark transition"
+        href="/programs"
+        class="block mt-2 text-white bg-blue-600 px-3 py-2 text-center rounded-sm font-semibold"
       >
         Python Data Analytics
       </a>
@@ -56,184 +114,175 @@ import { useEffect, useState } from "react";
       >
         Read More
       </a>
-      <!-- Close button placed in the middle bottom -->
+
       <button
         onclick="document.getElementById('popup').style.display='none'"
         class="absolute top-4 left-3.8 transform -translate-x-1/2 text-gray-500 hover:text-black-700"
       >
-        X
       </button>
     </div>
   </div>
+</Layout>
 
-  <script>
-    setTimeout(() => {
-      document.getElementById("popup").style.display = "flex";
-    }, 2000);
-  </script>
+<script>
+  setTimeout(() => {
+    document.getElementById("popup").style.display = "flex";
+  }, 2000);
+</script>
 
-  <!-- Quick Links -->
-  <section class="py-16 bg-white">
-    <div class="container mx-auto px-4">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-        <a href="/admissions" class="group">
-          <div class="p-6 bg-gray-50 rounded-lg hover:shadow-lg transition">
-            <h3 class="text-xl font-semibold text-primary mb-2">Apply Now</h3>
-            <p class="text-gray-600">Start your journey with Global Nexus</p>
-          </div>
-        </a>
-        <a href="/admissions" class="group">
-          <div class="p-6 bg-gray-50 rounded-lg hover:shadow-lg transition">
-            <h3 class="text-xl font-semibold text-primary mb-2">
-              Scholarships
-            </h3>
-            <p class="text-gray-600">Explore funding opportunities</p>
-          </div>
-        </a>
-        <a href="/programs" class="group">
-          <div class="p-6 bg-gray-50 rounded-lg hover:shadow-lg transition">
-            <h3 class="text-xl font-semibold text-primary mb-2">
-              Learning Portal
-            </h3>
-            <p class="text-gray-600">Access your online courses</p>
-          </div>
-        </a>
-        <a href="/contact" class="group">
-          <div class="p-6 bg-gray-50 rounded-lg hover:shadow-lg transition">
-            <h3 class="text-xl font-semibold text-primary mb-2">Contact Us</h3>
-            <p class="text-gray-600">Get in touch with our team</p>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Mission & Vision -->
-  <section class="py-16 bg-gray-50">
-    <div class="container mx-auto px-4">
-      <div class="max-w-3xl mx-auto text-center">
-        <h2 class="text-3xl font-bold text-gray-900 mb-8">
-          Our Vision & Mission
-        </h2>
-        <div class="space-y-8">
-          <div>
-            <h3 class="text-2xl font-semibold text-primary mb-4">Vision</h3>
-            <p class="text-lg text-gray-600">
-              To be a transformative institution that empowers the next
-              generation of leaders, innovators, and professionals in technology
-              and data sciences across Africa and beyond.
-            </p>
-          </div>
-          <div>
-            <h3 class="text-2xl font-semibold text-primary mb-4">Mission</h3>
-            <p class="text-lg text-gray-600">
-              To provide high-quality, accessible education that bridges local
-              needs with global opportunities, creating pathways to employment,
-              innovation, and societal impact.
-            </p>
-          </div>
+<!-- Quick Links -->
+<section class="py-16 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <a href="/admissions" class="group">
+        <div class="p-6 bg-gray-50 rounded-lg hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold text-primary mb-2">Apply Now</h3>
+          <p class="text-gray-600">Start your journey with Global Nexus</p>
         </div>
-      </div>
+      </a>
+      <a href="/admissions" class="group">
+        <div class="p-6 bg-gray-50 rounded-lg hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold text-primary mb-2">Scholarships</h3>
+          <p class="text-gray-600">Explore funding opportunities</p>
+        </div>
+      </a>
+      <a href="/programs" class="group">
+        <div class="p-6 bg-gray-50 rounded-lg hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold text-primary mb-2">
+            Learning Portal
+          </h3>
+          <p class="text-gray-600">Access your online courses</p>
+        </div>
+      </a>
+      <a href="/contact" class="group">
+        <div class="p-6 bg-gray-50 rounded-lg hover:shadow-lg transition">
+          <h3 class="text-xl font-semibold text-primary mb-2">Contact Us</h3>
+          <p class="text-gray-600">Get in touch with our team</p>
+        </div>
+      </a>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Student Gallery -->
-  <section class="py-16 bg-white">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">
-        Our Students at Work
+<!-- Mission & Vision -->
+<section class="py-16 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <div class="max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-gray-900 mb-8">
+        Our Vision & Mission
       </h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <img
-          src="/images/back.jpeg"
-          alt="Students collaborating"
-          class="w-full h-64 object-cover rounded-lg shadow-md"
-        />
-        <img
-          src="/images/learning.jpeg"
-          alt="Students in workshop"
-          class="w-full h-64 object-cover rounded-lg shadow-md"
-        />
-        <img
-          src="/images/steam2.jpeg"
-          alt="Students presenting"
-          class="w-full h-64 object-cover rounded-lg shadow-md"
-        />
+      <div class="space-y-8">
+        <div>
+          <h3 class="text-2xl font-semibold text-primary mb-4">Vision</h3>
+          <p class="text-lg text-gray-600">
+            To be a transformative institution that empowers the next generation
+            of leaders, innovators, and professionals in technology and data
+            sciences across Africa and beyond.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-2xl font-semibold text-primary mb-4">Mission</h3>
+          <p class="text-lg text-gray-600">
+            To provide high-quality, accessible education that bridges local
+            needs with global opportunities, creating pathways to employment,
+            innovation, and societal impact.
+          </p>
+        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <!-- News & Events -->
-  <section class="py-16 bg-gray-50">
-    <div class="container mx-auto px-4">
-      <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">
-        Latest News & Events
-      </h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-white rounded-lg shadow-md overflow-hidden">
-          <img
-            src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-            alt="Event"
-            class="w-full h-48 object-cover"
-          />
-          <div class="p-6">
-            <h3 class="text-xl font-semibold text-gray-900 mb-2">
-              Professional Data Science & Artificial Intelligence (New)
-            </h3>
-            <p class="text-gray-600 mb-4">
-              Join us new professional Data Science & Artificial Intelligence
-              program in collaboration with Institute of Analytics (Endorsed).
-            </p>
-            <a
-              href="#"
-              class="text-primary font-semibold hover:text-primary-dark"
-              >Learn more →</a
-            >
-          </div>
+<!-- Student Gallery -->
+<section class="py-16 bg-white">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">
+      Our Students at Work
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <img
+        src="/images/back.jpeg"
+        alt="Students collaborating"
+        class="w-full h-64 object-cover rounded-lg shadow-md"
+      />
+      <img
+        src="/images/learning.jpeg"
+        alt="Students in workshop"
+        class="w-full h-64 object-cover rounded-lg shadow-md"
+      />
+      <img
+        src="/images/steam2.jpeg"
+        alt="Students presenting"
+        class="w-full h-64 object-cover rounded-lg shadow-md"
+      />
+    </div>
+  </div>
+</section>
+
+<!-- News & Events -->
+<section class="py-16 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">
+      Latest News & Events
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="bg-white rounded-lg shadow-md overflow-hidden">
+        <img
+          src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+          alt="Event"
+          class="w-full h-48 object-cover"
+        />
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">
+            Professional Data Science & Artificial Intelligence (New)
+          </h3>
+          <p class="text-gray-600 mb-4">
+            Join us new professional Data Science & Artificial Intelligence
+            program in collaboration with Institute of Analytics (Endorsed).
+          </p>
+          <a href="#" class="text-primary font-semibold hover:text-primary-dark"
+            >Learn more →</a
+          >
         </div>
-        <div class="bg-white rounded-lg shadow-md overflow-hidden">
-          <img
-            src="/images/studing.jpeg"
-            alt="Event"
-            class="w-full h-48 object-cover"
-          />
-          <div class="p-6">
-            <h3 class="text-xl font-semibold text-gray-900 mb-2">
-              National Computing Center (UK) & Tech Innovation Workshop
-            </h3>
-            <p class="text-gray-600 mb-4">
-              A hands-on workshop exploring the latest trends in AI and Python
-              Data Analytics and more
-            </p>
-            <a
-              href="#"
-              class="text-primary font-semibold hover:text-primary-dark"
-              >Learn more →</a
-            >
-          </div>
+      </div>
+      <div class="bg-white rounded-lg shadow-md overflow-hidden">
+        <img
+          src="/images/studing.jpeg"
+          alt="Event"
+          class="w-full h-48 object-cover"
+        />
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">
+            National Computing Center (UK) & Tech Innovation Workshop
+          </h3>
+          <p class="text-gray-600 mb-4">
+            A hands-on workshop exploring the latest trends in AI and Python
+            Data Analytics and more
+          </p>
+          <a href="#" class="text-primary font-semibold hover:text-primary-dark"
+            >Learn more →</a
+          >
         </div>
-        <div class="bg-white rounded-lg shadow-md overflow-hidden">
-          <img
-            src="/images/setting.jpeg"
-            alt="Event"
-            class="w-full h-48 object-cover"
-          />
-          <div class="p-6">
-            <h3 class="text-xl font-semibold text-gray-900 mb-2">
-              Professional Business Data Analytics
-            </h3>
-            <p class="text-gray-600 mb-4">
-              Global Nexus Institute is pleased to announce the new program:
-              Professional Business Data Analytics (endorsed by NCC and IoA).
-            </p>
-            <a
-              href="#"
-              class="text-primary font-semibold hover:text-primary-dark"
-              >Learn more →</a
-            >
-          </div>
+      </div>
+      <div class="bg-white rounded-lg shadow-md overflow-hidden">
+        <img
+          src="/images/setting.jpeg"
+          alt="Event"
+          class="w-full h-48 object-cover"
+        />
+        <div class="p-6">
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">
+            Professional Business Data Analytics
+          </h3>
+          <p class="text-gray-600 mb-4">
+            Global Nexus Institute is pleased to announce the new program:
+            Professional Business Data Analytics (endorsed by NCC and IoA).
+          </p>
+          <a href="#" class="text-primary font-semibold hover:text-primary-dark"
+            >Learn more →</a
+          >
         </div>
       </div>
     </div>
-  </section>
-  </Layout>
+  </div>
+</section>
