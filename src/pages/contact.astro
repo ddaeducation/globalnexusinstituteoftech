@@ -156,9 +156,9 @@ import { Heart, Users } from "lucide-react";
         <div>
           <!-- Support Our Mission Section -->
           <div class="mb-8">
-            <h2 class="text-3xl font-bold text-gray-900 mb-4">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">
               Support Our Mission
-            </h2>
+            </h3>
             <p class="text-lg text-gray-600 mb-6">
               Help us provide education opportunities to underrepresented groups
               including females, young mothers, and people with disabilities.
@@ -194,7 +194,7 @@ import { Heart, Users } from "lucide-react";
 
         <!-- Right Column: Donation Options and Donate Now Button -->
         <div class="bg-white p-8 rounded-lg shadow-lg">
-          <h3 class="text-2xl font-semibold text-gray-900 mb-6">
+          <h3 class="text-xl font-semibold text-gray-900 mb-6">
             Make a Donation
           </h3>
           <div class="space-y-4">
@@ -230,7 +230,7 @@ import { Heart, Users } from "lucide-react";
             <input
               type="number"
               id="customAmount"
-              placeholder="Custom amount"
+              placeholder="Enter amount"
               class="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               oninput="setAmount(this.value)"
             />
@@ -238,7 +238,7 @@ import { Heart, Users } from "lucide-react";
             <!-- Donate Now Button -->
             <a
               id="donateNowButton"
-              href="#"
+              href="https://store.pesapal.com/_donate_"
               target="_blank"
               rel="noopener noreferrer"
               class="block w-full py-4 bg-blue-600 text-white rounded-lg font-semibold text-center hover:bg-blue-700 transition-colors"
@@ -250,16 +250,4 @@ import { Heart, Users } from "lucide-react";
       </div>
     </div>
   </section>
-
-  <script>
-    // Set donation amount to custom amount input field
-    function setAmount(amount) {
-      // Update the custom amount input field
-      document.getElementById("customAmount").value = amount;
-
-      // Update the Donate Now button's href with the selected amount
-      var donateButton = document.getElementById("donateNowButton");
-      donateButton.href ="https://store.pesapal.com/globalnexusinstituteltd?amount=" + amount;
-    }
-  </script>
 </Layout>
