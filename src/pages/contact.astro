@@ -1,6 +1,8 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import { supabase } from "../lib/supabase";
+import React, { useState } from "react";
+import { Heart, Users } from "lucide-react";
 ---
 
 <Layout title="Contact Us">
@@ -146,32 +148,118 @@ import { supabase } from "../lib/supabase";
     </div>
   </section>
 
+  <!-- Donate Button Section -->
+  <section id="donate" class="py-10 bg-gradient-to-r from-blue-50 to-indigo-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <!-- Left Column: Support Our Mission and Your Impact -->
+        <div>
+          <!-- Support Our Mission Section -->
+          <div class="mb-8">
+            <h2 class="text-3xl font-bold text-gray-900 mb-4">
+              Support Our Mission
+            </h2>
+            <p class="text-lg text-gray-600 mb-6">
+              Help us provide education opportunities to underrepresented groups
+              including females, young mothers, and people with disabilities.
+            </p>
+          </div>
+
+          <!-- Your Impact Section -->
+          <div class="bg-white p-6 rounded-lg shadow-lg mb-8">
+            <div class="flex items-center mb-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="w-6 h-6 text-blue-600 mr-3"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 2l2 7h6l-4 6 2 7-6-4-6 4 2-7-4-6h6z"></path>
+              </svg>
+              <h3 class="text-xl font-semibold">Your Impact</h3>
+            </div>
+            <ul class="space-y-3 text-gray-600">
+              <li>✓ Fund scholarships for deserving students</li>
+              <li>✓ Support educational resources and equipment</li>
+              <li>✓ Enable impactiful mentorship programs</li>
+              <li>✓ Create opportunities for vulnerable communities</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Right Column: Donation Options and Donate Now Button -->
+        <div class="bg-white p-8 rounded-lg shadow-lg">
+          <h3 class="text-2xl font-semibold text-gray-900 mb-6">
+            Make a Donation
+          </h3>
+          <div class="space-y-4">
+            <!-- Donation Buttons -->
+            <div class="grid grid-cols-2 gap-4">
+              <button
+                class="p-4 border-2 border-blue-600 rounded-lg text-blue-600 hover:bg-blue-50 font-semibold"
+                onclick="setAmount(25)"
+              >
+                $25
+              </button>
+              <button
+                class="p-4 border-2 border-blue-600 rounded-lg text-blue-600 hover:bg-blue-50 font-semibold"
+                onclick="setAmount(50)"
+              >
+                $50
+              </button>
+              <button
+                class="p-4 border-2 border-blue-600 rounded-lg text-blue-600 hover:bg-blue-50 font-semibold"
+                onclick="setAmount(100)"
+              >
+                $100
+              </button>
+              <button
+                class="p-4 border-2 border-blue-600 rounded-lg text-blue-600 hover:bg-blue-50 font-semibold"
+                onclick="setAmount(250)"
+              >
+                $250
+              </button>
+            </div>
+
+            <!-- Custom Amount Input -->
+            <input
+              type="number"
+              id="customAmount"
+              placeholder="Custom amount"
+              class="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              oninput="setAmount(this.value)"
+            />
+
+            <!-- Donate Now Button -->
+            <a
+              id="donateNowButton"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block w-full py-4 bg-blue-600 text-white rounded-lg font-semibold text-center hover:bg-blue-700 transition-colors"
+            >
+              Donate Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <script>
-    const contactForm = document.getElementById("contact-form");
+    // Set donation amount to custom amount input field
+    function setAmount(amount) {
+      // Update the custom amount input field
+      document.getElementById("customAmount").value = amount;
 
-    contactForm?.addEventListener("submit", async (e) => {
-      e.preventDefault();
-
-      const formData = new FormData(e.target as HTMLFormElement);
-
-      try {
-        const { error } = await window.supabase
-          .from("contact_messages")
-          .insert({
-            name: formData.get("name"),
-            email: formData.get("email"),
-            subject: formData.get("subject"),
-            message: formData.get("message"),
-          });
-
-        if (error) throw error;
-
-        alert("Message sent successfully!");
-        contactForm.reset();
-      } catch (error) {
-        console.error("Error sending message:", error);
-        alert("Error sending message. Please try again.");
-      }
-    });
+      // Update the Donate Now button's href with the selected amount
+      var donateButton = document.getElementById("donateNowButton");
+      donateButton.href ="https://store.pesapal.com/globalnexusinstituteltd?amount=" + amount;
+    }
   </script>
 </Layout>
